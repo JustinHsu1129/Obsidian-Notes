@@ -1,154 +1,241 @@
-## Part 1: Comprehensive Step-by-Step Launch Guide
+# Local VSD-OpenLane & Magic Setup Notes
 
-This setup assumes you are working from your Mac terminal inside your `Openlane/vsd-openlane` repository directory, with your PDK already populated in `$HOME/openlane/pdks`.
+  
 
-### Step 1: Start the Graphical noVNC EDA Environment
+This notes sheet guides you through starting your local OpenLane GUI server, managing custom designs, running simulation flows, and visualizing results.
 
-Instead of running a headless text container, we will launch the unified graphical desktop environment. This command mounts your local designs folder and your downloaded PDK path directly into the container.
+  
 
-Run this command in your **native Mac terminal**:
+---
 
-Bash
+  
 
-```
-docker run -d \
-  --name osic-gui \
-  --platform linux/amd64 \
-  -p 6080:80 \
-  -v $HOME/openlane/pdks:/foss/pdks:ro \
-  -v $(pwd)/.openlane-designs:/foss/designs \
-  -e PDK_ROOT=/foss/pdks \
-  hpretl/iic-osic-tools:latest
-```
+## 1. Starting the Server
 
-### Step 2: Access the Visual Desktop
+  
 
-1. Open your web browser (use an **Incognito / Private Window** to avoid extension conflicts).
-    
-2. Navigate to: `http://localhost:6080/vnc.html`
-    
-3. Click **Connect**. If it prompts you for a password, enter: `abc123`
-    
-4. You will now see a full Linux desktop interface inside your browser tab.
-    
-5. Use `docker stop osic-gui` to stop the noVNC server if done (use `docker start osic-gui` to restart server). 
-    
+The main script is fully automated. Run it from your Mac's host terminal:
 
-### Step 3: Open the Terminal Inside noVNC & Launch OpenLane
+  
 
-All subsequent steps happen **inside the web browser terminal application** in noVNC:
+```bash
 
-1. Click the Terminal icon on the desktop to open a shell interface.
-    
-2. Launch the OpenLane flow toolchain by running:
-    
-    Bash
-    
-    ```
-    openlane
-    ```
-    
-    _(This initializes the tool environment and presents you with an interactive OpenLane prompt: `OpenLane Container (1.1.1):/foss/designs%`)_
-    
+cd /Users/jhsu2022/Openlane/vsd-openlane
 
-### Step 4: Run the Implementation Flow
-
-To execute a non-interactive automated run on a design (e.g., `picorv32a`), enter this into the OpenLane prompt:
-
-Bash
+./start-vsd-openlane.sh
 
 ```
-flow.tcl -design /foss/designs/picorv32a -tag test_run
-```
 
-### Step 5: Open Magic to View Your Layout GUI
+  
 
-Once the flow finishes running successfully, exit the OpenLane prompt (`exit`) or open a new terminal tab in noVNC, then run:
+### What this script does:
 
-Bash
+1. **Auto-Starts Docker**: Launches Docker Desktop on your Mac if it isn't running and waits until it is fully active.
 
-```
-# 1. Move to the results folder
-cd /foss/designs/picorv32a/runs/test_run/results/final/
+2. **Starts the Server**: Spins up the OpenLane local container with GUI (noVNC) and Docker-in-Docker support.
 
-# 2. Open Magic with the Sky130 technology file
-magic -T /foss/pdks/sky130A/libs.tech/magic/sky130A.tech
-```
+3. **Real-Time File Syncing**: Begins monitoring and automatically syncing your custom designs into the container.
 
-Inside the Magic `tkcon` terminal console window that pops open, load your compiled layout using the absolute paths:
+4. **Auto-Cleanup**: Tails the container logs. **Pressing `Ctrl+C` or closing the terminal window** will automatically stop and remove the container to free up system memory.
 
-Tcl
+  
 
-```
-lef read /foss/designs/picorv32a/runs/test_run/tmp/merged.max.lef
-def read /foss/designs/picorv32a/runs/test_run/results/final/def/picorv32a.def
-```
+---
 
-_Click into the black layout canvas and press **`v`** to zoom-to-fit your design!_
+  
 
-## Part 2: Working with Custom Designs
+## 2. Managing Custom Designs
 
-When you want to build your own custom digital block instead of using pre-packaged examples like `picorv32a`, you must organize your workspace files intentionally so that OpenLane's automated scripts can find them.
+  
 
-### Where to Place Your Files
+The workflow is set up so you edit files directly on your Mac, and they instantly sync to the container.
 
-On your native host Mac, your design workspace folder is physically mapped to:
+  
 
-`vsd-openlane/.openlane-designs/`
+* **Mac Folder Path**: Place your custom designs inside:
 
-To add a new custom hardware design (e.g., a custom accelerator block named `my_accelerator`), create a dedicated subdirectory structure inside that folder exactly like this:
+`/Users/jhsu2022/Openlane/vsd-openlane/my_designs/`
 
-Plaintext
+*Example Structure:*
 
-```
-vsd-openlane/.openlane-designs/
-└── my_accelerator/
-    ├── config.tcl
-    └── src/
-        ├── my_accelerator.v
-        └── my_submodule.v
-```
+```text
 
-### 1. The `src/` Directory
+my_designs/
 
-Put all of your structural or behavioral hardware description source files (`.v` or `.sv`) inside this subdirectory. OpenLane will read these source files during the Yosys logic synthesis stage.
+└── pm32/
 
-### 2. The `config.tcl` Configuration File
+├── config.json (or config.tcl)
 
-Every custom design requires a `config.tcl` file in its root directory. This file instructs OpenLane how to synthesize and construct your layout. Here is a baseline skeleton configuration you can copy and modify for your designs:
+├── pin_order.cfg
 
-Tcl
+└── pm32.v
 
 ```
-# Design Name (Must match your top-level Verilog module name)
-set ::env(DESIGN_NAME) "my_accelerator"
 
-# Path to Verilog Source Files
-set ::env(VERILOG_FILES) [glob $::env(DESIGN_DIR)/src/*.v]
+* **Auto-Syncing**: The startup script automatically syncs `my_designs/` to the container's path (`~/Desktop/OpenLane/designs/`) every **2 seconds**.
 
-# Clock Configuration
-set ::env(CLOCK_PORT) "clk"
-set ::env(CLOCK_PERIOD) "10.0"
+  
 
-# Design Core Target Density (Utilization)
-set ::env(FP_CORE_UTIL) "35"
-set ::env(PL_TARGET_DENSITY) "0.40"
+---
 
-# Handle Die/Core Sizing automatically
-set ::env(FP_SIZING) "relative"
+  
 
-# Physical Cell Configurations
-set ::env(SYNTH_MAX_FANOUT) "5"
-```
+## 3. Running OpenLane Flows
 
-### How to Run Your Custom Design
+  
 
-Once your `config.tcl` and `src/*.v` files are saved in place on your Mac, they will immediately show up inside your noVNC Docker container.
+Open the terminal **inside your VNC Web Browser Desktop** (at `http://localhost:6080/vnc.html`) or connect via `docker exec -it vsd-openlane-local bash`.
 
-To execute your custom design run, simply launch OpenLane as described in Part 1 and call:
+  
 
-Bash
+### Option A: The Fast Non-Interactive Way (Recommended)
+
+This is the easiest way to run flows. It automatically spins up the inner environment, executes the flow, and overwrites previous runs:
+
+```bash
+
+cd ~/Desktop/OpenLane
+
+make test TEST_DESIGN=<design_name>
 
 ```
-flow.tcl -design /foss/designs/my_accelerator -tag run_v1
+
+*Example for pm32:*
+
+```bash
+
+make test TEST_DESIGN=pm32
+
 ```
+
+  
+
+### Option B: The Interactive Tcl Console Way
+
+Use this if you want to run steps manually or debug the flow step-by-step:
+
+1. **Mount and enter the OpenLane container**:
+
+```bash
+
+cd ~/Desktop/OpenLane
+
+make mount
+
+```
+
+2. **Prepare the design & start the interactive flow**:
+
+```bash
+
+./flow.tcl -interactive -design <design_name>
+
+```
+
+3. **Run steps in the Tcl console (`%` prompt)**:
+
+* Run the whole flow automatically:
+
+```tcl
+
+run_non_interactive
+
+```
+
+* Or run step-by-step:
+
+```tcl
+
+run_synthesis
+
+run_floorplan
+
+run_placement
+
+run_cts
+
+run_routing
+
+run_magic
+
+```
+
+4. **Exit the environment**:
+
+```tcl
+
+exit
+
+```
+
+Then type `exit` again to leave the container.
+
+  
+
+---
+
+  
+
+## 4. Visualizing Layouts with Magic
+
+  
+
+To view layouts, you must run Magic from the terminal **inside the VNC GUI Desktop** (since it requires a graphical interface).
+
+  
+
+### Step 1: Start Magic
+
+Open the terminal in VNC and run:
+
+```bash
+
+magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech
+
+```
+
+  
+
+### Step 2: Load the Design using Absolute Paths
+
+A Magic layout window and a console window (**Tkcon**) will open. Type the following absolute path commands into the **Tkcon console** to avoid directory mismatch issues:
+
+  
+
+#### For the `pm32` Design:
+
+```tcl
+
+lef read /home/vscode/Desktop/OpenLane/designs/pm32/runs/<RUN_DIR>/tmp/merged.nom.lef
+
+def read /home/vscode/Desktop/OpenLane/designs/pm32/runs/<RUN_DIR>/results/routing/pm32.def
+
+```
+
+*(Replace `<RUN_DIR>` with the folder name of your latest run, e.g., `RUN_2026.06.20_02.20.31`)*
+
+  
+
+#### For the default `spm` Test Design:
+
+```tcl
+
+lef read /home/vscode/Desktop/OpenLane/designs/spm/runs/openlane_test/tmp/merged.nom.lef
+
+def read /home/vscode/Desktop/OpenLane/designs/spm/runs/openlane_test/results/routing/spm.def
+
+```
+
+  
+
+### Step 3: Magic Navigation Shortcuts
+
+Once loaded:
+
+* Click inside the Magic layout window.
+
+* Press **`v`** on your keyboard to auto-fit/zoom the entire routed design onto the screen.
+
+* Hold **Right-Click** and drag to draw a box, then press **`z`** to zoom in.
+
+* Press **`Shift + Z`** to zoom out.
