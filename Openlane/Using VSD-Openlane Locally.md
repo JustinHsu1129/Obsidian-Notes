@@ -26,7 +26,8 @@ cd /Users/jhsu2022/Openlane/vsd-openlane
 
 ```
 
-  
+
+http://localhost:6080/vnc.html
 
 ### What this script does:
 
