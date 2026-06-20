@@ -29,6 +29,7 @@ cd /Users/jhsu2022/Openlane/vsd-openlane
 
 http://localhost:6080/vnc.html
 
+`./sync-designs.sh` to sync designs
 ### What this script does:
 
 1. **Auto-Starts Docker**: Launches Docker Desktop on your Mac if it isn't running and waits until it is fully active.
