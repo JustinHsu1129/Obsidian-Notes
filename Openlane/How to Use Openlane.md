@@ -26,3 +26,7 @@ Config file is written in `JSON`, and contains several variables that provide ba
 `CLOCK_PORT` is the name of the clock pin in the top level module
 `CLOCK_PERIOD` is the target clock period specified in nanoseconds (1/period = frequency)
 `PDK` tells Openlane which PDK to use
+
+## Variable referencing and overrides
+
+You only need to declare variables in `config.json` if you want to override the defaults or if they are unique to the design (like `DESIGN_NAME`, `VERILOG_FILES`, and `CLOCK_PERIOD`). If you do not specify anything the variables will inherit the default properties of the PDK's optimized default
