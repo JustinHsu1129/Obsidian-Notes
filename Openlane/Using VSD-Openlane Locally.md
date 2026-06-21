@@ -1,8 +1,8 @@
-# Local VSD-OpenLane & Magic Setup Notes
+# Local LibreLane & Magic Setup Notes
 
   
 
-This notes sheet guides you through starting your local OpenLane GUI server, managing custom designs, running simulation flows, and visualizing results.
+This notes sheet guides you through starting your local LibreLane GUI server, managing custom designs, running simulation flows, and visualizing results.
 
   
 
@@ -14,9 +14,9 @@ This notes sheet guides you through starting your local OpenLane GUI server, man
 
   
 
-The main script is fully automated. Run it from your Mac's host terminal:
+Run the unified startup script from your Mac's host terminal:
 
-  
+  http://localhost:6080/vnc.html
 
 ```bash
 
@@ -26,15 +26,13 @@ cd /Users/jhsu2022/Openlane/vsd-openlane
 
 ```
 
+  
 
-http://localhost:6080/vnc.html
-
-`./sync-designs.sh` to sync designs
 ### What this script does:
 
 1. **Auto-Starts Docker**: Launches Docker Desktop on your Mac if it isn't running and waits until it is fully active.
 
-2. **Starts the Server**: Spins up the OpenLane local container with GUI (noVNC) and Docker-in-Docker support.
+2. **Starts the Server**: Spins up the LibreLane local container with GUI (noVNC) and Docker-in-Docker support.
 
 3. **Real-Time File Syncing**: Begins monitoring and automatically syncing your custom designs into the container.
 
@@ -66,7 +64,7 @@ my_designs/
 
 └── pm32/
 
-├── config.json (or config.tcl)
+├── config.json (or config.yaml)
 
 ├── pin_order.cfg
 
@@ -74,7 +72,7 @@ my_designs/
 
 ```
 
-* **Auto-Syncing**: The startup script automatically syncs `my_designs/` to the container's path (`~/Desktop/OpenLane/designs/`) every **2 seconds**.
+* **Auto-Syncing**: The startup script automatically syncs `my_designs/` to the container's path (`~/Desktop/LibreLane/designs/`) every **2 seconds**.
 
   
 
@@ -82,23 +80,21 @@ my_designs/
 
   
 
-## 3. Running OpenLane Flows
+## 3. Running LibreLane Flows
 
   
 
-Open the terminal **inside your VNC Web Browser Desktop** (at `http://localhost:6080/vnc.html`) or connect via `docker exec -it vsd-openlane-local bash`.
+Open the terminal **inside your VNC Web Browser Desktop** (at `http://localhost:6080/vnc.html`).
 
   
 
-### Option A: The Fast Non-Interactive Way (Recommended)
+### Run Command
 
-This is the easiest way to run flows. It automatically spins up the inner environment, executes the flow, and overwrites previous runs:
+Use the `librelane` alias to execute your design:
 
 ```bash
 
-cd ~/Desktop/OpenLane
-
-make test TEST_DESIGN=<design_name>
+librelane ./designs/<design_name>/config.json
 
 ```
 
@@ -106,71 +102,13 @@ make test TEST_DESIGN=<design_name>
 
 ```bash
 
-make test TEST_DESIGN=pm32
+librelane ./designs/pm32/config.json
 
 ```
 
   
 
-### Option B: The Interactive Tcl Console Way
-
-Use this if you want to run steps manually or debug the flow step-by-step:
-
-1. **Mount and enter the OpenLane container**:
-
-```bash
-
-cd ~/Desktop/OpenLane
-
-make mount
-
-```
-
-2. **Prepare the design & start the interactive flow**:
-
-```bash
-
-./flow.tcl -interactive -design <design_name>
-
-```
-
-3. **Run steps in the Tcl console (`%` prompt)**:
-
-* Run the whole flow automatically:
-
-```tcl
-
-run_non_interactive
-
-```
-
-* Or run step-by-step:
-
-```tcl
-
-run_synthesis
-
-run_floorplan
-
-run_placement
-
-run_cts
-
-run_routing
-
-run_magic
-
-```
-
-4. **Exit the environment**:
-
-```tcl
-
-exit
-
-```
-
-Then type `exit` again to leave the container.
+*(Note: If you just created the server for the first time, open a **new** terminal tab in VNC to ensure the `librelane` shortcut is active, or run `source ~/.bashrc` in your current tab).*
 
   
 
@@ -200,33 +138,19 @@ magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech
 
 ### Step 2: Load the Design using Absolute Paths
 
-A Magic layout window and a console window (**Tkcon**) will open. Type the following absolute path commands into the **Tkcon console** to avoid directory mismatch issues:
+A Magic layout window and a console window (**Tkcon**) will open. Type the following absolute path commands into the **Tkcon console** to load your design:
 
   
 
-#### For the `pm32` Design:
-
 ```tcl
 
-lef read /home/vscode/Desktop/OpenLane/designs/pm32/runs/<RUN_DIR>/tmp/merged.nom.lef
+lef read /home/vscode/Desktop/LibreLane/designs/<design_name>/runs/<RUN_DIR>/final/lef/<design_name>.lef
 
-def read /home/vscode/Desktop/OpenLane/designs/pm32/runs/<RUN_DIR>/results/routing/pm32.def
+def read /home/vscode/Desktop/LibreLane/designs/<design_name>/runs/<RUN_DIR>/final/def/<design_name>.def
 
 ```
 
-*(Replace `<RUN_DIR>` with the folder name of your latest run, e.g., `RUN_2026.06.20_02.20.31`)*
-
-  
-
-#### For the default `spm` Test Design:
-
-```tcl
-
-lef read /home/vscode/Desktop/OpenLane/designs/spm/runs/openlane_test/tmp/merged.nom.lef
-
-def read /home/vscode/Desktop/OpenLane/designs/spm/runs/openlane_test/results/routing/spm.def
-
-```
+*(Replace `<design_name>` with your design name like `pm32`, and `<RUN_DIR>` with the folder name of your latest run, e.g., `RUN_2026-06-21_01-22-30`)*
 
   
 
@@ -238,6 +162,6 @@ Once loaded:
 
 * Press **`v`** on your keyboard to auto-fit/zoom the entire routed design onto the screen.
 
-* Hold **Right-Click** and drag to draw a box, then press **`z`** to zoom in.
+* Hold **Right-Click and drag** to draw a box, then press **`z`** to zoom in.
 
 * Press **`Shift + Z`** to zoom out.
