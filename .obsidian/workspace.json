@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LibreLane/LibreLane Cheatsheet.md",
+                "file": "LibreLane/Using VSD-LibreLane Locally.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LibreLane Cheatsheet"
+              "title": "Using VSD-LibreLane Locally"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LibreLane/LibreLane Cheatsheet.md",
+                "file": "LibreLane/Using VSD-LibreLane Locally.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of LibreLane Cheatsheet"
+              "title": "Outline of Using VSD-LibreLane Locally"
             }
           }
         ],
@@ -187,12 +187,12 @@
   },
   "active": "ce55130bd5f1ac0b",
   "lastOpenFiles": [
-    "blarg.md",
+    "LibreLane/Clock Tree Synthesis and Routing.md",
     "LibreLane/LibreLane Cheatsheet.md",
+    "blarg.md",
     "Untitled",
     "LibreLane/Synthesis.md",
     "LibreLane/How to Use LibreLane.md",
-    "LibreLane/Floorplanning and Placement.md",
-    "LibreLane/Clock Tree Synthesis and Routing.md"
+    "LibreLane/Floorplanning and Placement.md"
   ]
 }
