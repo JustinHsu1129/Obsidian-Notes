@@ -35,7 +35,7 @@ Run the unified startup script from your Windows's host terminal:
 
 cd C:\Users\Justin\Documents\Personal Projects\LibreLane
 
-./start-vsd-openlane.sh
+powershell -ExecutionPolicy Bypass -File .\start-vsd-openlane.ps1
 
 ```
 
