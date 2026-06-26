@@ -27,7 +27,7 @@ cd /Users/jhsu2022/Openlane/vsd-openlane
 ```
 
   
-Run the unified startup script from your Mac's host terminal:
+Run the unified startup script from your Windows's host terminal:
 
   http://localhost:6080/vnc.html
 
