@@ -27,7 +27,19 @@ cd /Users/jhsu2022/Openlane/vsd-openlane
 ```
 
   
+Run the unified startup script from your Mac's host terminal:
 
+  http://localhost:6080/vnc.html
+
+```bash
+
+cd /Users/jhsu2022/Openlane/vsd-openlane
+
+./start-vsd-openlane.sh
+
+```
+
+  
 ### What this script does:
 
 1. **Auto-Starts Docker**: Launches Docker Desktop on your Mac if it isn't running and waits until it is fully active.
