@@ -33,7 +33,7 @@ Run the unified startup script from your Windows's host terminal:
 
 ```bash
 
-cd /Users/jhsu2022/Openlane/vsd-openlane
+cd C:\Users\Justin\Documents\Personal Projects\LibreLane
 
 ./start-vsd-openlane.sh
 
