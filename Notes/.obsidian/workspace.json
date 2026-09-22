@@ -11,14 +11,12 @@
             "id": "97dd07343204867b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
-                "mode": "source",
-                "source": false
+                "file": "Jane Street Competition/Base architecture.md"
               },
-              "icon": "lucide-file",
-              "title": "Design Specs and RTL"
+              "icon": "excalidraw-icon",
+              "title": "Base architecture"
             }
           }
         ]
@@ -144,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
+                "file": "Jane Street Competition/Base architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -158,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.01953125
+    "width": 265.01953125,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,53 +172,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f997c24c750f48dc",
+  "active": "97dd07343204867b",
   "lastOpenFiles": [
-    "LibreLane/Clock Tree Synthesis and Routing.md",
-    "LibreLane/Using VSD-LibreLane Locally.md",
-    "LibreLane/Synthesis.md",
-    "LibreLane/LibreLane Cheatsheet.md",
-    "LibreLane/How to Use LibreLane.md",
-    "LibreLane/Floorplanning and Placement.md",
-    "LibreLane",
-    "SystemVerilog/attached files/Screenshot 2026-03-24 at 21.31.01.png",
-    "SystemVerilog/attached files/Screenshot 2026-03-24 at 19.54.36.png",
-    "SystemVerilog/attached files/Pasted image 20260324214433.png",
-    "SystemVerilog/attached files/Pasted image 20260324214030.png",
-    "SystemVerilog/attached files/Pasted image 20260324213529.png",
-    "SystemVerilog/attached files/Pasted image 20260324212913.png",
-    "SystemVerilog/attached files/Pasted image 20260324212658.png",
-    "SystemVerilog/attached files/Pasted image 20260324212415.png",
-    "SystemVerilog/attached files/Pasted image 20260324212039.png",
-    "SystemVerilog/attached files/Pasted image 20260324211716.png",
-    "SystemVerilog/attached files",
-    "SystemVerilog/Testbench architecture.md",
-    "SystemVerilog/Randomization.md",
-    "SystemVerilog/Queues.md",
-    "SystemVerilog/Processes in SystemVerilog.md",
-    "SystemVerilog/Data Types.md",
-    "SystemVerilog/Classes.md",
-    "SystemVerilog/Arrays.md",
-    "SystemVerilog",
-    "Python/AMD ROCM.md",
-    "Python/Pytorch.md",
-    "Scratchpad.md",
-    "Untitled.base",
+    "Jane Street Competition/Base architecture.md",
     "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
-    "Images",
-    "Cadence/RTL-To-GDSII Flow v7.0",
-    "Cadence",
-    "Python/Intro.md",
-    "Notes/LibreLane/LibreLane Cheatsheet.md",
-    "Python",
-    "Notes/blarg.md",
-    "Notes/LibreLane/How to Use LibreLane.md",
-    "Notes/LibreLane/Using VSD-LibreLane Locally.md",
-    "Notes/LibreLane/Clock Tree Synthesis and Routing.md",
-    "Notes/LibreLane/Floorplanning and Placement.md",
-    "Notes/LibreLane/Synthesis.md",
-    "Notes/TCL",
-    "Notes/LibreLane",
-    "Notes/Chip Design/Using VSD-Openlane.md"
+    "conflict-files-obsidian-git.md",
+    "Jane Street Competition/bit_banging_protocol_rates_reference.md",
+    "Jane Street Competition/Intro.md",
+    "Jane Street Competition",
+    "Excalidraw/Scripts/Downloaded/Toggle Grid.svg",
+    "Excalidraw/Scripts/Downloaded/Toggle Grid.md",
+    "Excalidraw/Scripts/Downloaded/Set Grid.svg",
+    "Excalidraw/Scripts/Downloaded/Set Grid.md",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "Excalidraw",
+    "Depcreciated/VLSI Design/Excalidraw/Logic Synthesis.md",
+    "Depcreciated/VLSI Design/Excalidraw/Intro.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 3 Verilog and Testing.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 2 Exercises with SiliWiz.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 1 OpenLane2 set up and configuration.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L4 PnR Tools.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L3 Verilog.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L2 The Transistor, Inverter, and CMOS Gates.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L1 Intro to Chip Design.md",
+    "Depcreciated/DTU chip design/Excalidraw/Drawing 2025-07-09 21.09.57.excalidraw.md",
+    "Depcreciated/DTU chip design/Attached Files/Verilog_Cheat_Sheet.pdf",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709215401.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214913.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214743.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214306.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214240.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213938.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213052.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213041.png",
+    "Depcreciated/VLSI Design/Untitled.md",
+    "Depcreciated/VLSI Design/README.md",
+    "Depcreciated/VLSI Design/Excalidraw",
+    "Depcreciated/LibreLane/Using VSD-LibreLane Locally.md",
+    "Depcreciated/LibreLane/Synthesis.md",
+    "Depcreciated/LibreLane/LibreLane Cheatsheet.md",
+    "Depcreciated/LibreLane/How to Use LibreLane.md",
+    "Depcreciated/LibreLane/Floorplanning and Placement.md",
+    "Depcreciated/LibreLane/Clock Tree Synthesis and Routing.md",
+    "Depcreciated/DTU chip design/Verilog Cheat Sheet.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course",
+    "Depcreciated/DTU chip design/Excalidraw",
+    "Depcreciated/DTU chip design/Attached Files",
+    "Depcreciated/VLSI Design"
   ]
 }
