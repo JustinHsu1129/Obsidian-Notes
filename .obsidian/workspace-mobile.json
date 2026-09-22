@@ -188,6 +188,9 @@
   "active": "76014f4c642e19b6",
   "lastOpenFiles": [
     "Notes/Jane Street Competition/Intro.md",
+    "Notes/Jane Street Competition/Design Document.md",
+    "/Notes/Jane Street Competition/Design Document.md",
+    "Notes/Jane Street Competition/Base architecture.md",
     "School",
     "Notes/Jane Street Competition/bit_banging_protocol_rates_reference.md",
     "/Notes/Jane Street Competition/bit_banging_protocol_rates_reference.md",
@@ -196,7 +199,6 @@
     "/Notes",
     "/School",
     "Notes/Python/AMD ROCM.md",
-    "Notes/Jane Street Competition/Base architecture.md",
     "Excalidraw",
     "Notes/Jane Street Competition",
     "Notes/Depcreciated",
@@ -230,7 +232,6 @@
     "Notes/SystemVerilog/Data Types.md",
     "Notes/SystemVerilog/Testbench architecture.md",
     "Notes/SystemVerilog/Classes.md",
-    "Notes/Cadence",
-    "Notes/Scratchpad.md"
+    "Notes/Cadence"
   ]
 }
