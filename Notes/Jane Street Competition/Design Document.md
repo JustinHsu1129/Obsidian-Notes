@@ -7,7 +7,7 @@ Can use CORDIC as an area efficient way to implement the different ways of gener
 	+ Decide on how to split up instruction fields
 		+ What bits should be used to program the CORDIC engine, what fields used for control
 			+ Can look at ML quantization formats to program frequency
-			+ Can use BF16/fp24/etc. to represent large frequencies
+			+ Can use BF16/fp24/etc. to represent large frequencies (no need for sign bit)
 				+ https://en.wikipedia.org/wiki/Bfloat16_floating-point_format
 		+ Use multiple instructions to program multiple pins
 
