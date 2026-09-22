@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "a77396664a085d8b",
+        "id": "1f48be5b45598ac1",
         "type": "tabs",
         "children": [
           {
-            "id": "64b7f40a83447aea",
+            "id": "97dd07343204867b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/AMD ROCM.md",
+                "file": "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AMD ROCM"
-            }
-          },
-          {
-            "id": "04dcfdebece38d66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Scratchpad.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Scratchpad"
+              "title": "Design Specs and RTL"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scratchpad.md",
+                "file": "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -184,20 +169,44 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04dcfdebece38d66",
+  "active": "f997c24c750f48dc",
   "lastOpenFiles": [
+    "LibreLane/Clock Tree Synthesis and Routing.md",
+    "LibreLane/Using VSD-LibreLane Locally.md",
+    "LibreLane/Synthesis.md",
+    "LibreLane/LibreLane Cheatsheet.md",
+    "LibreLane/How to Use LibreLane.md",
+    "LibreLane/Floorplanning and Placement.md",
+    "LibreLane",
+    "SystemVerilog/attached files/Screenshot 2026-03-24 at 21.31.01.png",
+    "SystemVerilog/attached files/Screenshot 2026-03-24 at 19.54.36.png",
+    "SystemVerilog/attached files/Pasted image 20260324214433.png",
+    "SystemVerilog/attached files/Pasted image 20260324214030.png",
+    "SystemVerilog/attached files/Pasted image 20260324213529.png",
+    "SystemVerilog/attached files/Pasted image 20260324212913.png",
+    "SystemVerilog/attached files/Pasted image 20260324212658.png",
+    "SystemVerilog/attached files/Pasted image 20260324212415.png",
+    "SystemVerilog/attached files/Pasted image 20260324212039.png",
+    "SystemVerilog/attached files/Pasted image 20260324211716.png",
+    "SystemVerilog/attached files",
+    "SystemVerilog/Testbench architecture.md",
+    "SystemVerilog/Randomization.md",
+    "SystemVerilog/Queues.md",
+    "SystemVerilog/Processes in SystemVerilog.md",
+    "SystemVerilog/Data Types.md",
+    "SystemVerilog/Classes.md",
+    "SystemVerilog/Arrays.md",
+    "SystemVerilog",
     "Python/AMD ROCM.md",
-    "Scratchpad.md",
     "Python/Pytorch.md",
+    "Scratchpad.md",
+    "Untitled.base",
     "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
-    "Images/Pasted image 20260909124316.png",
     "Images",
-    "Images/Pasted image 20260909131209.png",
-    "Images/Pasted image 20260909130353.png",
-    "Images/Pasted image 20260909124828.png",
     "Cadence/RTL-To-GDSII Flow v7.0",
     "Cadence",
     "Python/Intro.md",
@@ -211,29 +220,6 @@
     "Notes/LibreLane/Synthesis.md",
     "Notes/TCL",
     "Notes/LibreLane",
-    "Notes/Chip Design/Using VSD-Openlane.md",
-    "Notes/README.md",
-    "Notes",
-    "VLSI/Excalidraw/Logic Synthesis.md",
-    "VLSI/Excalidraw/Intro.md",
-    "VLSI/README.md",
-    "Notes/SystemVerilog/Queues.md",
-    "Notes/SystemVerilog/Classes.md",
-    "Notes/SystemVerilog/Testbench architecture.md",
-    "Notes/SystemVerilog/Data Types.md",
-    "Notes/SystemVerilog/Arrays.md",
-    "Notes/SystemVerilog/Randomization.md",
-    "Notes/SystemVerilog/Processes in SystemVerilog.md",
-    "SystemVerilog/Intro.md",
-    "Notes/SystemVerilog/attached files/Pasted image 20260324214433.png",
-    "Notes/SystemVerilog/attached files/Pasted image 20260324214030.png",
-    "Notes/SystemVerilog/attached files/Pasted image 20260324213529.png",
-    "Notes/SystemVerilog/attached files/Screenshot 2026-03-24 at 21.31.01.png",
-    "Notes/SystemVerilog/attached files/Pasted image 20260324212913.png",
-    "Notes/SystemVerilog/attached files/Pasted image 20260324212658.png",
-    "Notes/SystemVerilog/attached files",
-    "Welcome.md",
-    "Notes/SystemVerilog",
-    "VLSI/Excalidraw"
+    "Notes/Chip Design/Using VSD-Openlane.md"
   ]
 }
