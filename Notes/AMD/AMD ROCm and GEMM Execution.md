@@ -6,3 +6,5 @@ Key ISA difference is scalar + vector
 	+ 4 scalar inst maps to only 4 registers instead of 4 * 32 registers in NVIDIA
 	+ SGPRs can be also used for handling branching and data dependencies
 		+ Divergence is not branching-it is masking
++ Compiler works with the microarchitecture
+	+ Schedules independent work between dependent inst
