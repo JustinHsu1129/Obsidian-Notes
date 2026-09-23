@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/LibreLane/LibreLane Cheatsheet.md",
+                "file": "AMD/AMD ROCm and GEMM Execution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for LibreLane Cheatsheet"
+              "title": "Backlinks"
             }
           },
           {
@@ -130,12 +130,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "AMD/AMD ROCm and GEMM Execution.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
@@ -159,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Jane Street Competition/Base architecture.md",
+                "file": "AMD/AMD ROCm and GEMM Execution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -173,11 +173,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.01953125,
-    "collapsed": true
+    "width": 265.01953125
   },
   "left-ribbon": {
     "hiddenItems": {
+      "grimoire:Open Grimoire": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -189,7 +189,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70df856d5183a749",
+  "active": "12356c72f9055258",
   "lastOpenFiles": [
     "AMD/AMD GPUs.md",
     "AMD/AMD ROCm and GEMM Execution.md",
