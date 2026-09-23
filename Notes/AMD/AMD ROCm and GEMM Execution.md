@@ -10,3 +10,4 @@ Key ISA difference is scalar + vector
 	+ Schedules independent work between dependent inst
 
 CU (CDNA4) and WGP (CDNA5) are equivalent things, just in the WGP the SIMDs are 32 and one wavefront inst issued in one cycle
++ Getting improvements to matmul performance by increasing the size each inst can handle between generations
