@@ -75,4 +75,4 @@ AMD's open-source software stack for GPU computing and AI. It serves as the AMD 
 3. **Instruction Generation**: The compiler emits AMD CDNA machine instructions, specifically **MFMA** (Matrix Fused Multiply-Add) instructions.
 4. **Execution on Hardware**: Dispatched through ROCr runtime to the CU/WGP, utilizing the Matrix Cores and local LDS (Local Data Share) scratchpad memory.
 
-
+## Origami + Stream-K: Choosing a kernel without a table
