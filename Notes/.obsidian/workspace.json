@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Jane Street Competition/Design Document.md",
+                "file": "AMD GPUs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Design Document"
+              "title": "AMD GPUs"
             }
           }
         ],
@@ -203,9 +203,13 @@
   },
   "active": "6a6e01117af59219",
   "lastOpenFiles": [
+    "Python/AMD ROCM.md",
+    "AMD GPUs.md",
+    "Python/Pytorch.md",
+    "Python/Intro.md",
+    "Jane Street Competition/Design Document.md",
     "Jane Street Competition/Base architecture.md",
     "Jane Street Competition/Intro.md",
-    "Jane Street Competition/Design Document.md",
     "Untitled",
     "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
     "conflict-files-obsidian-git.md",
@@ -242,10 +246,6 @@
     "Depcreciated/VLSI Design/Excalidraw",
     "Depcreciated/LibreLane/Using VSD-LibreLane Locally.md",
     "Depcreciated/LibreLane/Synthesis.md",
-    "Depcreciated/LibreLane/LibreLane Cheatsheet.md",
-    "Depcreciated/LibreLane/How to Use LibreLane.md",
-    "Depcreciated/LibreLane/Floorplanning and Placement.md",
-    "Depcreciated/LibreLane/Clock Tree Synthesis and Routing.md",
     "Depcreciated/DTU chip design/Intro to Chip Design DTU Course",
     "Depcreciated/DTU chip design/Excalidraw",
     "Depcreciated/DTU chip design/Attached Files"
