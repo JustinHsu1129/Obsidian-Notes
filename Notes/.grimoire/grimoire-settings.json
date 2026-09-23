@@ -1,9 +1,9 @@
 {
   "userName": "",
-  "permissionMode": "normal",
-  "model": "antigravity",
+  "permissionMode": "full_access",
+  "model": "antigravity:Gemini 3.8 Flash (Medium)",
   "thinkingBudget": "off",
-  "effortLevel": "high",
+  "effortLevel": "default",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -122,12 +122,84 @@
       "cliPath": "",
       "cliPathsByHost": {},
       "customModels": "",
-      "discoveredModels": [],
-      "enabled": false,
+      "discoveredModels": [
+        {
+          "label": "Gemini 3.8 Flash (High)",
+          "rawId": "Gemini 3.8 Flash (High)"
+        },
+        {
+          "label": "Gemini 3.8 Flash (Medium)",
+          "rawId": "Gemini 3.8 Flash (Medium)"
+        },
+        {
+          "label": "Gemini 3.8 Flash (Low)",
+          "rawId": "Gemini 3.8 Flash (Low)"
+        },
+        {
+          "label": "Gemini 3.7 Flash (High)",
+          "rawId": "Gemini 3.7 Flash (High)"
+        },
+        {
+          "label": "Gemini 3.7 Flash (Medium)",
+          "rawId": "Gemini 3.7 Flash (Medium)"
+        },
+        {
+          "label": "Gemini 3.7 Flash (Low)",
+          "rawId": "Gemini 3.7 Flash (Low)"
+        },
+        {
+          "label": "Gemini 3.6 Flash (High)",
+          "rawId": "Gemini 3.6 Flash (High)"
+        },
+        {
+          "label": "Gemini 3.6 Flash (Medium)",
+          "rawId": "Gemini 3.6 Flash (Medium)"
+        },
+        {
+          "label": "Gemini 3.6 Flash (Low)",
+          "rawId": "Gemini 3.6 Flash (Low)"
+        },
+        {
+          "label": "Gemini 3.1 Pro (High)",
+          "rawId": "Gemini 3.1 Pro (High)"
+        },
+        {
+          "label": "Gemini 3.1 Pro (Low)",
+          "rawId": "Gemini 3.1 Pro (Low)"
+        },
+        {
+          "label": "Claude Sonnet 4.6 (Thinking)",
+          "rawId": "Claude Sonnet 4.6 (Thinking)"
+        },
+        {
+          "label": "Claude Opus 4.6 (Thinking)",
+          "rawId": "Claude Opus 4.6 (Thinking)"
+        },
+        {
+          "label": "GPT-OSS 120B (Medium)",
+          "rawId": "GPT-OSS 120B (Medium)"
+        }
+      ],
+      "enabled": true,
       "environmentHash": "",
       "environmentVariables": "",
       "modelAliases": {},
-      "visibleModels": []
+      "visibleModels": [
+        "Gemini 3.8 Flash (High)",
+        "Gemini 3.8 Flash (Medium)",
+        "Gemini 3.8 Flash (Low)",
+        "Gemini 3.7 Flash (High)",
+        "Gemini 3.7 Flash (Medium)",
+        "Gemini 3.7 Flash (Low)",
+        "Gemini 3.6 Flash (High)",
+        "Gemini 3.6 Flash (Medium)",
+        "Gemini 3.6 Flash (Low)",
+        "Gemini 3.1 Pro (High)",
+        "Gemini 3.1 Pro (Low)",
+        "Claude Sonnet 4.6 (Thinking)",
+        "Claude Opus 4.6 (Thinking)",
+        "GPT-OSS 120B (Medium)"
+      ]
     },
     "gemini": {
       "discoveredModelsFingerprint": "",
@@ -199,11 +271,11 @@
   "settingsProvider": "antigravity",
   "savedProviderModel": {
     "codex": "gpt-5.5",
-    "antigravity": "antigravity"
+    "antigravity": "antigravity:Gemini 3.8 Flash (Medium)"
   },
   "savedProviderEffort": {
     "codex": "high",
-    "antigravity": "high"
+    "antigravity": "default"
   },
   "savedProviderServiceTier": {
     "codex": "default"
@@ -211,10 +283,10 @@
   "savedProviderThinkingBudget": {},
   "savedProviderPermissionMode": {
     "codex": "normal",
-    "antigravity": "normal"
+    "antigravity": "full_access"
   },
   "lastCustomModel": "",
-  "lastSeenChangelogVersion": "",
+  "lastSeenChangelogVersion": "2.0.4",
   "maxTabs": 5,
   "tabBarPosition": "header",
   "showPanelLabels": false,

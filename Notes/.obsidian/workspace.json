@@ -167,13 +167,33 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "1e8b47ecc1015caf",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "0cbeab29444edd7f",
+            "type": "leaf",
+            "state": {
+              "type": "grimoire-view",
+              "state": {},
+              "icon": "grimoire",
+              "title": "Grimoire"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 265.01953125
+    "width": 419.8807373046875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,7 +209,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12356c72f9055258",
+  "active": "0cbeab29444edd7f",
   "lastOpenFiles": [
     "AMD/AMD GPUs.md",
     "AMD/AMD ROCm and GEMM Execution.md",

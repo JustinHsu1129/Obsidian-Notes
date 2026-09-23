@@ -15,3 +15,4 @@ CU (CDNA4) and WGP (CDNA5) are equivalent things, just in the WGP the SIMDs are 
 # ROCm Software Stack
 
 Open source AMD software stack-includes runtime, compiler, utilities, and optimized math and compute libraries
+
