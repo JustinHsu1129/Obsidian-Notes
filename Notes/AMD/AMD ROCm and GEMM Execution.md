@@ -8,3 +8,5 @@ Key ISA difference is scalar + vector
 		+ Divergence is not branching-it is masking
 + Compiler works with the microarchitecture
 	+ Schedules independent work between dependent inst
+
+CU (CDNA4) and WGP (CDNA5) are equivalent things, just in the WGP the SIMDs are 32 and one wavefront inst issued in one cycle
