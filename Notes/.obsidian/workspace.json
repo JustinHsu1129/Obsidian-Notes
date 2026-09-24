@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "90105f1b6b6a4146",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f48be5b45598ac1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97dd07343204867b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jane Street Competition/Intro.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro"
+            }
+          },
+          {
+            "id": "3362e13a518835b3",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Jane Street Competition/Base architecture.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Base architecture"
+            }
+          },
+          {
+            "id": "6a6e01117af59219",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jane Street Competition/Design Document.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Design Document"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "04ccc50511fe39e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a558ada79357233",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f997c24c750f48dc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7e5eae0f41ebd0f6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b69caa0958361491",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 264.1640625
+  },
+  "right": {
+    "id": "dfaf563c42a1eff0",
+    "type": "split",
+    "children": [
+      {
+        "id": "a29fb294dff4a75a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f7cb32c03365994",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/LibreLane/LibreLane Cheatsheet.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for LibreLane Cheatsheet"
+            }
+          },
+          {
+            "id": "75b1fd091ed058af",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "ceb4aebb6086a305",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "12356c72f9055258",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Jane Street Competition/Base architecture.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 265.01953125,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "6a6e01117af59219",
+  "lastOpenFiles": [
+    "Jane Street Competition/Base architecture.md",
+    "Jane Street Competition/Design Document.md",
+    "Jane Street Competition/Intro.md",
+    "Untitled",
+    "Cadence/RTL-To-GDSII Flow v7.0/Design Specs and RTL.md",
+    "conflict-files-obsidian-git.md",
+    "Jane Street Competition/bit_banging_protocol_rates_reference.md",
+    "Jane Street Competition",
+    "Excalidraw/Scripts/Downloaded/Toggle Grid.svg",
+    "Excalidraw/Scripts/Downloaded/Toggle Grid.md",
+    "Excalidraw/Scripts/Downloaded/Set Grid.svg",
+    "Excalidraw/Scripts/Downloaded/Set Grid.md",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "Excalidraw",
+    "Depcreciated/VLSI Design/Excalidraw/Logic Synthesis.md",
+    "Depcreciated/VLSI Design/Excalidraw/Intro.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 3 Verilog and Testing.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 2 Exercises with SiliWiz.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/Lab 1 OpenLane2 set up and configuration.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L4 PnR Tools.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L3 Verilog.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L2 The Transistor, Inverter, and CMOS Gates.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course/L1 Intro to Chip Design.md",
+    "Depcreciated/DTU chip design/Excalidraw/Drawing 2025-07-09 21.09.57.excalidraw.md",
+    "Depcreciated/DTU chip design/Attached Files/Verilog_Cheat_Sheet.pdf",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709215401.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214913.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214743.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214306.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709214240.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213938.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213052.png",
+    "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213041.png",
+    "Depcreciated/VLSI Design/Untitled.md",
+    "Depcreciated/VLSI Design/README.md",
+    "Depcreciated/VLSI Design/Excalidraw",
+    "Depcreciated/LibreLane/Using VSD-LibreLane Locally.md",
+    "Depcreciated/LibreLane/Synthesis.md",
+    "Depcreciated/LibreLane/LibreLane Cheatsheet.md",
+    "Depcreciated/LibreLane/How to Use LibreLane.md",
+    "Depcreciated/LibreLane/Floorplanning and Placement.md",
+    "Depcreciated/LibreLane/Clock Tree Synthesis and Routing.md",
+    "Depcreciated/DTU chip design/Intro to Chip Design DTU Course",
+    "Depcreciated/DTU chip design/Excalidraw",
+    "Depcreciated/DTU chip design/Attached Files"
+  ]
+}
