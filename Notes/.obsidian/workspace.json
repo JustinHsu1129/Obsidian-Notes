@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "AMD ROCM"
             }
+          },
+          {
+            "id": "307303d8121f809e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.14.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,7 +207,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97dd07343204867b",
+  "active": "307303d8121f809e",
   "lastOpenFiles": [
     "AMD/AMD ROCm and GEMM Execution.md",
     "AMD/AMD GPUs.md",
