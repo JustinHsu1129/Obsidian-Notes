@@ -50,3 +50,4 @@ const int threads_per_block)
 multiply_add_coalesced<<<blocks, threads_per_block>>>(A, B, C, dst, len);
 
 
+![[deductive_fault_simulation_reference]]

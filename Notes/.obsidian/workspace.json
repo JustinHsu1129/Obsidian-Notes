@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/AMD ROCM.md",
+                "file": "Scratchpad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AMD ROCM"
-            }
-          },
-          {
-            "id": "307303d8121f809e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.14.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.14.4"
+              "title": "Scratchpad"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,15 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "307303d8121f809e",
+  "active": "97dd07343204867b",
   "lastOpenFiles": [
+    "deductive_fault_simulation_reference.md",
+    "Python/AMD ROCM.md",
+    "Untitled.md",
     "AMD/AMD ROCm and GEMM Execution.md",
     "AMD/AMD GPUs.md",
     "Jane Street Competition/Intro.md",
     "Jane Street Competition/Base architecture.md",
     "AMD/L05-Co-DesignGuestLectureAlanSmith.pdf",
     "AMD",
-    "Python/AMD ROCM.md",
     "Python/Pytorch.md",
     "Python/Intro.md",
     "Jane Street Competition/Design Document.md",
@@ -250,9 +239,7 @@
     "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213052.png",
     "Depcreciated/DTU chip design/Attached Files/Pasted image 20250709213041.png",
     "Depcreciated/VLSI Design/Untitled.md",
-    "Depcreciated/VLSI Design/README.md",
     "Depcreciated/VLSI Design/Excalidraw",
-    "Depcreciated/LibreLane/Using VSD-LibreLane Locally.md",
     "Depcreciated/DTU chip design/Intro to Chip Design DTU Course",
     "Depcreciated/DTU chip design/Excalidraw"
   ]
