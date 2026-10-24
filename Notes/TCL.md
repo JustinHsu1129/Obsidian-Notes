@@ -74,3 +74,15 @@ proc name {arg1 arg2 ...} {
 ```
 
 Procedures automatically return the last value computed in the last command of the `proc`, but you can also explicitly use `return $value`
+
+Default parameter values can be defined using nested lists:
+
+```
+proc greet {name {prefix "Hello"}} {
+    return "$prefix, $name!"
+}
+
+puts [greet "Alice"]          ;# Outputs: Hello, Alice!
+puts [greet "Bob" "Welcome"]  ;# Outputs: Welcome, Bob!
+```
+
