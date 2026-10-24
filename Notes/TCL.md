@@ -62,3 +62,15 @@ set filename "output"
 puts "Log written to: /tmp/$filename.log"
 ```
 
+# Procedures (`proc`)
+
+Procedures are defined using the `proc` command. Every procedure runs in its own local scope by default, meaning variables instantiated within that `proc` are not accessible outside of that `proc`, and variables instantiated on the outside of that `proc` are not usable within that `proc`.
+
+Defining a proc:
+```
+proc name {arg1 arg2 ...} {
+	# body of proc
+}
+```
+
+Procedures automatically return the last value computed in the last command of the `proc`, but you can also explicitly use `return $value`
