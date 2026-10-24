@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 264.1640625
+    "width": 200
   },
   "right": {
     "id": "dfaf563c42a1eff0",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AMD/AMD ROCm and GEMM Execution.md",
+                "file": "TCL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -162,24 +162,13 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "0cbeab29444edd7f",
-            "type": "leaf",
-            "state": {
-              "type": "grimoire-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "grimoire-view"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 419.8807373046875,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,10 +183,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97dd07343204867b",
+  "active": "12356c72f9055258",
   "lastOpenFiles": [
-    "Scratchpad.md",
     "TCL.md",
+    "Scratchpad.md",
     "deductive_fault_simulation_reference.md",
     "Python/AMD ROCM.md",
     "Untitled.md",

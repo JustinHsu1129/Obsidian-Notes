@@ -214,3 +214,69 @@ print_user_info account
 # Role: Admin
 ```
 
+# Lists vs Strings
+
+A list is a string with specific whitespace and quoting rules, you should never construct lists with manual string concatenation, always use dedicated list commands:
+
+```
+# Bad: vulnerable to spaces or quotes breaking structure
+set items "apple orange"
+set items "$items banana with space"
+
+# Good: constructs safe elements
+set fruits [list "apple" "orange"]
+lappend fruits "banana with space"
+
+puts [lindex $fruits 2]   ;# Outputs: banana with space
+puts [llength $fruits]    ;# Outputs: 3
+```
+
+Key list commands to know:
+
+- `lindex $list $i` — get element at index `$i`.
+- `lappend varName elem ...` — append elements in-place to a variable.
+- `lsearch $list $pattern` — find matching elements.
+- `lsort $list` — sort elements alphabetically, numerically, or by custom key.
+- `split $str $delim` and `join $list $delim` — convert between strings and lists.
+
+# Arrays vs Dictionaries
+
+Arrays in Tcl are collections of variables tied to a namespace. They cannot be returned from or passed to a `proc` (must use `upvar` or `array get`):
+
+```
+set user(name) "Alice"
+set user(role) "Developer"
+
+# Inspecting keys and values
+puts [array names user] ;# role name
+```
+
+Dicts are true values that can be passed as normal arguments, returned from `proc`, and nested:
+
+```
+# Creating and updating a dict
+set profile [dict create name "Alice" role "Developer"]
+dict set profile location "Atlanta"
+
+# Reading values
+puts [dict get $profile name] ;# Alice
+
+# Iterating
+dict for {key val} $profile {
+    puts "$key -> $val"
+}
+```
+
+# File System Operations
+
+Tcl has built in collection of commands that handle path resolution and file management:
+
+```
+set path [file join "" "var" "log" "app.log"] ;# /var/log/app.log
+if {[file exists $path]} {
+    puts "Size: [file size $path] bytes"
+    puts "Directory: [file dirname $path]"
+    puts "Extension: [file extension $path]"
+}
+```
+
