@@ -86,3 +86,17 @@ puts [greet "Alice"]          ;# Outputs: Hello, Alice!
 puts [greet "Bob" "Welcome"]  ;# Outputs: Welcome, Bob!
 ```
 
+Variable arguments can be collected using `args`:
+
+```
+proc sum_all {args} {
+    set total 0
+    foreach n $args {
+        set total [expr {$total + $n}]
+    }
+    return $total
+}
+
+puts [sum_all 1 2 3 4 5] ;# Outputs: 15
+```
+
