@@ -288,4 +288,60 @@ set fp [open "data.txt" r]
 close $fp
 ```
 
-`open` and `close` are used to open and close channels, respectively
+`open` and `close` are used to open and close channels, respectively.
+
+Common access modes:
+
+- `r`: Read-only (file must exist).
+- `w`: Write-only (truncates existing file or creates new one).
+- `a`: Append-only (writes to the end of file).
+- `r+`: Read and write (file must exist).
+- `w+`: Read and write (truncates or creates).
+
+The standard way to read a file line by line is to process files using `gets` in a `while` loop:
+
+```
+set fp [open "input.txt" r]
+
+while {[gets $fp line] >= 0} {
+    puts "Read line: $line"
+}
+
+close $fp
+```
+
+When you supply a variable name to `gets`, it returns the number of characters read, or `-1` upon reaching EOF. By checking for `>= 0`, we can ensure that not even blank lines are skipped as only at EOF will the return be `-1`.
+
+An entire file can be read at once with:
+
+```
+set fp [open "config.json" r]
+set content [read $fp]
+close $fp
+
+puts "File size: [string length $content] characters"
+```
+
+or a chunk of that file can be read with:
+
+```
+set chunk [read $fp 1024] ;# Reads up to 1024 characters
+```
+
+By using `puts` as the first argument in the channel identifier:
+
+```
+# Writing (overwriting)
+set out [open "output.txt" w]
+puts $out "First line of text"
+puts $out "Second line of text"
+close $out
+
+# Appending
+set log [open "output.txt" a]
+puts $log "Appended entry at runtime"
+close $log
+```
+
+we can write or append to a file.
+
