@@ -122,3 +122,77 @@ Makes a list called `clk_list` with following entries: `clk_core, clk_mem, clk_p
 
 The `foreach` then iterates over `clk_list` where variable `clk` takes the value of the current element, and the body is executed using that variable `clk` instead, which will then be applied back to the entries in `clk_list`.
 
+Pairs of variables can also be iterated upon:
+
+```
+# Pin and its corresponding delay constraint
+set pin_delays {
+    in_a 1.2
+    in_b 0.8
+    in_c 1.5
+}
+
+foreach {pin delay} $pin_delays {
+    puts "Pin: $pin has a max delay of $delay ns"
+}
+```
+
+In the `pin_delays` list, each entry has a corresponding value, as such in `foreach` we can use 2 `var_names` to represent each entry and its corresponding value from the `pin_delays` list, and operate on both variables at one in the body.
+
+Multiple lists can also be passed in parallel:
+
+```
+set modules [list "alu" "regfile" "decoder"]
+set areas   [list 1200  4500      320]
+
+foreach mod $modules area $areas {
+    puts "Module $mod occupies $area um^2"
+}
+```
+
+Control commands `break` and `continue` can be used to control execution:
+
+```
+set corners [list "ss_0.72v_125c" "tt_0.80v_25c" "ff_0.88v_0c"]
+
+foreach corner $corners {
+    if {$corner eq "tt_0.80v_25c"} {
+        continue ;# Skip typical corner
+    }
+    puts "Analyzing extreme corner: $corner"
+}
+```
+
+---
+
+Variables defined outside of `proc` are global. Inside a `proc`, only local variables can be used:
+
+```
+set status "IDLE"
+
+proc print_status {} {
+    # Error: can't read "status": no such variable
+    puts "Status: $status"
+}
+```
+
+To use global variables within a `proc`, the commands `global` and `upvar` can be used.
+
+`global` links one or more variable names in the current `proc` to the top level global namespace:
+
+```
+set counter 0
+
+proc increment {} {
+    global counter
+    incr counter
+}
+
+increment
+increment
+puts $counter ;# Outputs: 2
+```
+
++ any changes to `counter` inside `increment` modify the real global value directly
++ `global` only targets the top level scope
+
