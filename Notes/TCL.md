@@ -280,3 +280,12 @@ if {[file exists $path]} {
 }
 ```
 
+All I/O, file operations, etc., is managed through channels. When you open a channel, a channel identifier is returned that allows you to read and write:
+
+```
+set fp [open "data.txt" r]
+# ... read or process ...
+close $fp
+```
+
+`open` and `close` are used to open and close channels, respectively
