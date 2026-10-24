@@ -196,3 +196,21 @@ puts $counter ;# Outputs: 2
 + any changes to `counter` inside `increment` modify the real global value directly
 + `global` only targets the top level scope
 
+`upvar` passes arrays into `proc` because using `global` will typically cause the array to be turned into a list or cause errors:
+
+```
+proc print_user_info {arrayName} {
+    upvar 1 $arrayName user
+    puts "Name: $user(name)"
+    puts "Role: $user(role)"
+}
+
+set account(name) "Dana"
+set account(role) "Admin"
+
+print_user_info account
+# Outputs:
+# Name: Dana
+# Role: Admin
+```
+
