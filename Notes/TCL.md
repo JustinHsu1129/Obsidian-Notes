@@ -100,3 +100,25 @@ proc sum_all {args} {
 puts [sum_all 1 2 3 4 5] ;# Outputs: 15
 ```
 
+---
+`foreach` is the primary command to iterate over elements in a list:
+
+`foreach var_name list body`
+
+`var_name`: the variable that takes the value of the current element on each iteration
+`list`: the list to iterate through
+`body`: the script enclosed with `{}` to be executed on each element
+
+```
+set clk_list [list "clk_core" "clk_mem" "clk_pcie"]
+
+foreach clk $clk_list {
+    puts "Applying clock uncertainty to: $clk"
+    # set_clock_uncertainty 0.1 [get_clocks $clk]
+}
+```
+
+Makes a list called `clk_list` with following entries: `clk_core, clk_mem, clk_pcie`
+
+The `foreach` then iterates over `clk_list` where variable `clk` takes the value of the current element, and the body is executed using that variable `clk` instead, which will then be applied back to the entries in `clk_list`.
+
