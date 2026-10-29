@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "TCL"
             }
+          },
+          {
+            "id": "7342658e03fe1905",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.14.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -144,7 +157,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TCL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12356c72f9055258",
+  "active": "7342658e03fe1905",
   "lastOpenFiles": [
     "TCL.md",
     "Scratchpad.md",
